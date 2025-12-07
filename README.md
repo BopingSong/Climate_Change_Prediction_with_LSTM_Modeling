@@ -1,10 +1,10 @@
 # Abstract
-Introduction
+## Introduction
 Accurate temperature forecasting is essential for understanding climate change impacts and supporting policy and adaptation planning. Deep learning models such as Long Short-Term Memory (LSTM) networks can capture long-term temporal patterns in climate data, yet global and regional climate systems differ in variability, seasonality, and data quality. This study evaluates how LSTM and Bidirectional LSTM (Bi-LSTM) architectures perform in forecasting monthly land temperatures at global and continent-specific scales.
-Methods
+## Methods
 We used the Berkeley Earth Surface Temperature Dataset, which includes more than 500,000 monthly observations from 1743 to 2013. A standardized preprocessing pipeline was implemented involving geographic harmonization, deduplication, interpolation, and continent assignment. Three neural architectures were trained: a baseline attention LSTM, an enhanced attention LSTM incorporating seasonal and lagged features, and a multi-feature attention Bi-LSTM. Models were trained both globally and for six continents using a 36-month input sequence to predict next-month temperature. Performance was evaluated using RMSE, MAE, and Directional Accuracy.
-Results
+## Results
 The Enhanced Attention LSTM achieved the best global performance with an RMSE of 0.0204, an MAE of 0.0133, and a directional accuracy of 0.875. At the continent level, the Bi-LSTM consistently achieved the lowest RMSE and MAE across all six regions, indicating a stronger ability to model localized and cyclical climate dynamics. Directional Accuracy remained similar across architectures, with smaller differences compared to error metrics.
-Conclusion
+## Conclusion
 Global forecasts benefit most from enriched feature engineering, while regional forecasting improves with bidirectional temporal encoding. These results provide a reproducible framework for climate time-series modeling and highlight the potential of combining feature-rich LSTMs and Bi-LSTMs for multi-scale climate forecasting.
 
